@@ -9,6 +9,9 @@ module load workbench/1.5.0
 dirp=/group/mlr-lab/Saskia/ECoG_LASSO/
 work=/group/mlr-lab/Saskia/ECoG_LASSO/work
 
+# run only if volumes containing coefficients exist
+if [ -d $work/sub-"$ids"/coefficients/volume/ ]; then
+
 # unzip template mesh from fsaverage
 if [ ! -f $work/coefficients/pial_right.gii ]; then
 cp $dirp/scripts/fsaverage/pial_left.gii.gz $work/coefficients/pial_left.gii.gz
@@ -16,9 +19,6 @@ cp $dirp/scripts/fsaverage/pial_right.gii.gz $work/coefficients/pial_right.gii.g
 gunzip $work/coefficients/pial_left.gii.gz
 gunzip $work/coefficients/pial_right.gii.gz
 fi
-
-# run only if volumes containing coefficients exist
-if [ -d $work/sub-"$ids"/coefficients/volume/ ]; then
 
 # make output directory
 rm -rf $work/sub-"$ids"/coefficients/surface/
