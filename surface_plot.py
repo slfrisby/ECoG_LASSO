@@ -5,7 +5,7 @@ Created on Fri Jul  5 16:35:07 2024
 @author: sf02
 """
 
-# this script is to be run after make_coefficient_surface_mesh.sh and before make_coefficient_videos.sh.
+# this script is to be run after make_coefficient_surface_mesh.sh and before make_coefficient_videos.sh.It depends on a conda environment that has matplotlib installed.
 
 import os
 import sys
