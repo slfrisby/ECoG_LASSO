@@ -1419,7 +1419,7 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   
   #get cluster indices from the group-level clusters
   clusters <- get.clust(dBgroupalphapowerltg,k=10,dmeth="cos")
-  
+
   # initialise array of clustered timecourses
   dBgroupalphapowerclusterbysub <- array(0,dim=c(max(clusters),ntpts,length(subs)))
   
@@ -1441,7 +1441,7 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   
   #get cluster indices from the group-level clusters
   clusters <- get.clust(dBgroupbetapowerltg,k=10,dmeth="cos")
-  
+ 
   # initialise array of clustered timecourses
   dBgroupbetapowerclusterbysub <- array(0,dim=c(max(clusters),ntpts,length(subs)))
   
@@ -1463,7 +1463,7 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   
   #get cluster indices from the group-level clusters
   clusters <- get.clust(dBgroupgammapowerltg,k=10,dmeth="cos")
-  
+ 
   # initialise array of clustered timecourses
   dBgroupgammapowerclusterbysub <- array(0,dim=c(max(clusters),ntpts,length(subs)))
   
@@ -1485,7 +1485,7 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   
   #get cluster indices from the group-level clusters
   clusters <- get.clust(dBgrouphighgammapowerltg,k=10,dmeth="cos")
-  
+
   # initialise array of clustered timecourses
   dBgrouphighgammapowerclusterbysub <- array(0,dim=c(max(clusters),ntpts,length(subs)))
   
