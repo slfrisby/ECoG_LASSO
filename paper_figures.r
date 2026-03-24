@@ -19,7 +19,7 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   plot.coefs <- dget("plot_coefs.r")
   get.clust <- dget("get_clust.r")
   plot.clacc <- dget("plot_clacc.r")
-  plot.cluster.compare <- dget("plot_cluster_compare.r")
+  plot.temporal.generalisation <- dget("plot_temporal_generalisation.r")
   plot.auc.widen <- dget("plot_auc_widen.r")
   setwd(path)
 
@@ -1335,37 +1335,37 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_power_overlap_wav.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_power_overlap_wav.svg",sep=""))}
-  plot.cluster.compare(dBallpowerltg,dBallpowerltg,colour1="#D8E7FF",colour2="#0066FF")
+  plot.temporal.generalisation(dBallpowerltg,colour1="#D8E7FF",colour2="#0066FF")
   dev.off()
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_theta_power_overlap_wav.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_theta_power_overlap_wav.svg",sep=""))}
-  plot.cluster.compare(dBallthetapowerltg,dBallthetapowerltg,colour1="#FF7E9C",colour2="#A50026")
+  plot.temporal.generalisation(dBallthetapowerltg,colour1="#EDCCD3",colour2="#A50026")
   dev.off()
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_alpha_power_overlap_wav.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_alpha_power_overlap_wav.svg",sep=""))}
-  plot.cluster.compare(dBallalphapowerltg,dBallalphapowerltg,colour1="#FCD2C5",colour2="#F46D43")
+  plot.temporal.generalisation(dBallalphapowerltg,colour1="#FCD2C5",colour2="#F46D43")
   dev.off()
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_beta_power_overlap_wav.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_beta_power_overlap_wav.svg",sep=""))}
-  plot.cluster.compare(dBallbetapowerltg,dBallbetapowerltg,colour1="#FEF0C7",colour2="#EBaF02")
+  plot.temporal.generalisation(dBallbetapowerltg,colour1="#FEF0C7",colour2="#EBaF02")
   dev.off()
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_gamma_power_overlap_wav.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_gamma_power_overlap_wav.svg",sep=""))}
-  plot.cluster.compare(dBallgammapowerltg,dBallgammapowerltg,colour1="#E0F1DF",colour2="#66BD63")
+  plot.temporal.generalisation(dBallgammapowerltg,colour1="#E0F1DF",colour2="#66BD63")
   dev.off()
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_high_gamma_power_overlap_wav.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_high_gamma_power_overlap_wav.svg",sep=""))}
-  plot.cluster.compare(dBallhighgammapowerltg,dBallhighgammapowerltg,colour1="#81C97F",colour2="#006837")
+  plot.temporal.generalisation(dBallhighgammapowerltg,colour1="#B3DEB2",colour2="#006837")
   dev.off()
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/voltage_overlap_wav.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/voltage_overlap_wav.svg",sep=""))}
-  plot.cluster.compare(allvoltageltg,allvoltageltg,colour1="#F2E5DB",colour2="#996035")
+  plot.temporal.generalisation(allvoltageltg,colour1="#F2E5DB",colour2="#996035")
   dev.off()
   
   
@@ -1412,7 +1412,7 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_theta_power_WGW_10clust.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_theta_power_WGW_10clust.svg",sep=""))}
-  plot.clacc(dBgroupthetapowerltg,clusters,dBgroupthetapowerclusterbysub,colour1="#A50026",colour2="#FF7E9C")
+  plot.clacc(dBgroupthetapowerltg,clusters,dBgroupthetapowerclusterbysub,colour1="#A50026",colour2="#EDCCD3")
   dev.off()
   
   # alpha
@@ -1500,7 +1500,7 @@ function(path,ntpts=166,wwidth=50,fileformat="png"){
   
   if (fileformat=="png"){png(paste(groupfigurespath,"/dB_high_gamma_power_WGW_10clust.png",sep=""))
   }else if (fileformat=="svg") {svg(paste(groupfigurespath,"/dB_high_gamma_power_WGW_10clust.svg",sep=""))}
-  plot.clacc(dBgrouphighgammapowerltg,clusters,dBgrouphighgammapowerclusterbysub,colour1="#006837",colour2="#81C97F")
+  plot.clacc(dBgrouphighgammapowerltg,clusters,dBgrouphighgammapowerclusterbysub,colour1="#006837",colour2="#B3DEB2")
   dev.off()
 
   # voltage
